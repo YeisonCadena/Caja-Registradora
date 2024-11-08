@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compra</title>
+    <link rel="icon" type="image/x-icon" href="anadir-al-carrito.png">
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container mt-4">
+        <div class="izquierda">
+            <h4>Productos</h4>
+
+            <!-- Selección del tipo de producto con un combobox -->
+            <div class="mb-0">
+                <label for="tipoProducto" class="form-label">Tipo de producto</label>
+                <select class="form-select" id="tipoProducto">
+                    <option value="nada" data-precio="0"></option>
+                    <option value="computador" data-precio="1000">Computador</option>
+                    <option value="celular" data-precio="500">Celular</option>
+                    <option value="tableta" data-precio="300">Tableta</option>
+                    <option value="audifonos" data-precio="50">Audífonos</option>
+                </select>
+            </div>
+            <!-- Lista de productos seleccionados y precio total -->
+            <h6>Productos seleccionados:</h6>
+            <textarea class="form-control" id="listaProductos" rows="4" readonly></textarea>
+
+            <div class="total-container">
+                <h6>Total: <input type="text" class="form-control" id="totalAcumulado" value="$0.00" readonly style="width: 300px;"></h6>
+            </div>
+           
+            
+        </div>
+
+        <!-- Columna derecha: Compra -->
+        <div class="derecha">
+            <h4>Compra</h4>
+
+            <!-- Producto -->
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="productoSeleccionado" class="form-label">Producto</label>
+                    <input type="text" class="form-control" id="productoSeleccionado" readonly>
+                </div>
+
+                <!-- Cantidad -->
+                <div class="col-md-3">
+                    <label for="cantidadProducto" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidadProducto" min="1" value="1">
+                </div>
+
+                <!-- Precio -->
+                <div class="col-md-3">
+                    <label for="precioProducto" class="form-label">Precio</label>
+                    <input type="text" class="form-control" id="precioProducto" readonly>
+                </div>
+            </div>
+
+            <!-- Botones Comprar y Borrar -->
+            <div class="mb-3">
+                <button class="btn btn-primary" id="btnComprar">Agregar</button>
+                <button class="btn btn-danger" id="btnBorrar">Limpiar</button>
+                <button class="btn btn-success" id="btnFinalizarCompra">Finalizar Compra</button>
+                <div class="mt-3">
+                    <label for="factura" class="form-label">Factura:</label>
+                    <textarea id="factura" class="form-control" rows="6" readonly></textarea>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

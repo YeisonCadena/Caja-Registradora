@@ -1,0 +1,26 @@
+body {
+    background-color: azure;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.izquierda {
+    flex: 1;
+    margin-right: 20px;
+}
+.derecha {
+    flex: 2;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+textarea {
+    resize: none; /* Quitar el botón de redimensionamiento */
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+}
+#total {
+    width: 150px;
+}
